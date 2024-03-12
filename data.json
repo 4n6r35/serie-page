@@ -1,0 +1,23 @@
+{
+    "series1": {
+        "name": "Stranger Things",
+        "img": "https://es.web.img3.acsta.net/pictures/22/05/14/13/26/5638861.jpg",
+        "categoria": "ciencia-ficcion",
+        "description": "Después de la extraña desaparición de un niño, un pueblo se encuentra ante un misterio que revela experimentos secretos, fuerzas sobrenaturales y a una niña muy especial.",
+        "acthors": "Winona Ryder,David Harbour,Millie Bobby Brown"
+    },
+    "series2": {
+        "name": "La ley de los audaces",
+        "img": "https://static.wikia.nocookie.net/doblaje/images/1/15/SUITSPOSTER.jpg/revision/latest?cb=20200623222343&path-prefix=es",
+        "categoria": "dramas",
+        "description": "Mike Ross, un joven brillante, pero que nunca terminó la universidad, impresiona a un hábil abogado y consigue trabajo en un prestigioso bufete.",
+        "acthors": "Gabriel Macht,Patrick J. Adams,Sarah Rafferty"
+    },
+    "series3": {
+        "name": "Nuevo rico, nuevo pobre",
+        "img": "https://www.infobae.com/new-resizer/wyB5NaptqGVcVGdmoDP_8MrNO2k=/arc-anglerfish-arc2-prod-infobae/public/SCGEEW3NXFE2RJTBRNSQGBL7UM.jpeg",
+        "categoria": "comedia",
+        "description": "Tras descubrir que los cambiaron al nacer, el adinerado Andrés y el humilde Brayan deben adaptarse a los estilos de vida y a los padres que les correspondían.",
+        "acthors": "Martín Karpan,Carolina Acevedo,Jhon Álex Toro"
+    }
+}
