@@ -1,12 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Series de Netflix</title>
+  <style>
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px;
+      width: 300px;
+      display: inline-block;
+    }
+    .card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-    <div> Mis series favoritas </div>
-    
+
+<div id="series-container"></div>
+
+<script>
+  // Función para leer datos de un archivo JSON y crear tarjetas HTML
+  function leerDataYCrearTarjetas() {
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('series-container');
+        Object.keys(data).forEach(key => {
+          const serie = data[key];
+          const card = document.createElement('div');
+          card.classList.add('card');
+
+          const img = document.createElement('img');
+          img.src = serie.img;
+
+          const nombre = document.createElement('h2');
+          nombre.textContent = serie.name;
+
+          const categoria = document.createElement('p');
+          categoria.textContent = `Categoría: ${serie.categoria}`;
+
+          const descripcion = document.createElement('p');
+          descripcion.textContent = serie.description;
+
+          const actores = document.createElement('p');
+          actores.textContent = `Actores: ${serie.acthors}`;
+
+          card.appendChild(img);
+          card.appendChild(nombre);
+          card.appendChild(categoria);
+          card.appendChild(descripcion);
+          card.appendChild(actores);
+          
+          container.appendChild(card);
+        });
+      })
+      .catch(error => {
+        console.error('Error al leer el archivo JSON:', error);
+      });
+  }
+
+  // Llama a la función cuando la página se cargue
+  window.onload = leerDataYCrearTarjetas;
+</script>
+
 </body>
 </html>
