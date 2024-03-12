@@ -4,28 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Series de Netflix</title>
-  <style>
-    .card {
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 10px;
-      margin: 10px;
-      width: 300px;
-      display: inline-block;
-    }
-    .card img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 5px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div id="series-container"></div>
 
 <script>
-  // Función para leer datos de un archivo JSON y crear tarjetas HTML
   function leerDataYCrearTarjetas() {
     fetch('data.json')
       .then(response => response.json())
@@ -64,8 +49,6 @@
         console.error('Error al leer el archivo JSON:', error);
       });
   }
-
-  // Llama a la función cuando la página se cargue
   window.onload = leerDataYCrearTarjetas;
 </script>
 
